@@ -98,13 +98,26 @@ int main()
     unsigned __int128 x = 4;
     std::cout << x << " Hello world." << std::endl;
     int arr[] = {1, 9, 7, 3, 2, 5};
-    
     *(arr + 2) = 6;
     cout << *(arr + 2) << endl;
+    
+
+    
+    int *numbers = new int[5];
+    for(int i = 0; i < 5; i++){
+        cout << "Enter number "<< i + 1 << ": ";
+        cin >> *(numbers + i);
+    }
+    cout << endl;
+    cout << setw(8) << "INDEX" << setw(10) << "NUMBER" << endl;
+    for(int i = 0; i < 5; i++){
+        cout << setw(8) << i << setw(10) << numbers[i] << endl;
+    }
+    // Clean after numbers; return them to the OS
+    delete[] numbers;    
 
 
     std::unique_ptr<int> unPtr1 = std::make_unique<int>(25);
-    
 
     message1();
 
