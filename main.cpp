@@ -110,13 +110,6 @@ int main()
     
     
     int arr[] = {1, 2, 3, 4};
-    for (int i{0}; i < 4; i++) {
-        std::cout << "{";
-        for(int j = i; j < 4; j++) {
-            std::cout << arr[j] << ", ";
-        }
-        std::cout  << "}" << std::endl;
-    }
 
     message1();
 
@@ -124,8 +117,7 @@ int main()
 }
 
 // DEFINITIONS
-std::ostream &operator<<(std::ostream &os, unsigned __int128 x)
-{
+std::ostream &operator<<(std::ostream &os, unsigned __int128 x) {
     if (x == 0)
     {
         os << '0';
