@@ -109,7 +109,7 @@ int main()
     std::cout << "\n" << *num << std::endl;
     
     
-    int arr[] = {1, 2, 3, 4};
+    int arr[] = {1, 9, 7, 3, 2, 5};
 
     message1();
 
