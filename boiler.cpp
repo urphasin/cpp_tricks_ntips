@@ -87,6 +87,8 @@ int main() {
     unsigned __int128 x = 4;
     // std::cout << x << std::endl;
     int arr[] = {1, 9, 7, 3, 2, 5};
+    *(arr + 2) = 6;
+    cout << *(arr + 2) << endl;
 
 
 
