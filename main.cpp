@@ -98,6 +98,9 @@ int main()
     unsigned __int128 x = 4;
     std::cout << x << " Hello world." << std::endl;
     int arr[] = {1, 9, 7, 3, 2, 5};
+    
+    *(arr + 2) = 6;
+    cout << *(arr + 2) << endl;
 
 
     std::unique_ptr<int> unPtr1 = std::make_unique<int>(25);
