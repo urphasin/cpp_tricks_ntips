@@ -86,7 +86,7 @@ int main() {
     unsigned __int128 x = 4;
     // std::cout << x << std::endl;
 
-    int arr = {1, 9, 7, 3, 2, 5};
+    int arr[] = {1, 9, 7, 3, 2, 5};
 
 
     return 0;
