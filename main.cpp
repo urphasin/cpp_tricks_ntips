@@ -24,6 +24,7 @@
 #include <functional>
 #include <utility>
 #include "main.h"
+#include <memory>
 using namespace std;
 
 /*
@@ -99,13 +100,7 @@ int main()
     int arr[] = {1, 9, 7, 3, 2, 5};
 
 
-    std::cout << "Enter som: ";
-    int anum;
-    cin >> anum;
-    int p = 56;
-    int* num = &p;
-    *num = 20;
-    std::cout << "\n" << *num << std::endl;
+    std::unique_ptr<int> unPtr1 = std::make_unique<int>(25);
     
 
     message1();
