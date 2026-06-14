@@ -89,8 +89,6 @@ struct Point2D {
 // MAIN
 int main()
 {
-
-
     /*
     unsigned __int128 is a compiler extension (mainly GCC/Clang),
     not a standard C++ integer type,
@@ -98,6 +96,7 @@ int main()
     */
     unsigned __int128 x = 4;
     std::cout << x << " Hello world." << std::endl;
+    int arr[] = {1, 9, 7, 3, 2, 5};
 
 
     std::cout << "Enter som: ";
@@ -108,8 +107,6 @@ int main()
     *num = 20;
     std::cout << "\n" << *num << std::endl;
     
-    
-    int arr[] = {1, 9, 7, 3, 2, 5};
 
     message1();
 
