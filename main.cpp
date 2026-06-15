@@ -118,6 +118,7 @@ int main()
 
 
     std::unique_ptr<int> unPtr1 = std::make_unique<int>(25);
+    auto smart = std::make_unique<struct Point2D>(Point2D{3, 4});
 
     message1();
 
