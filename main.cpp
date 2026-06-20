@@ -98,10 +98,13 @@ int main()
     unsigned __int128 x = 4;
     std::cout << x << " Hello world." << std::endl;
     int arr[] = {1, 9, 7, 3, 2, 5};
+    cout << *(arr + 2);
     *(arr + 2) = 6;
-    cout << *(arr + 2) << endl;
+    cout << " after: " << *(arr + 2) << endl;
     
-
+    cout << setw(1) << "a" 
+    << setw(2) << "bb" 
+    << setw(3) << "ccc" << endl;
     
     int *numbers = new int[5];
     for(int i = 0; i < 5; i++){
