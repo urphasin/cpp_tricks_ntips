@@ -34,8 +34,9 @@ POST SUBMISSION QUESTIONS:
 
 */
 
-// PROTOTYPES
-std::ostream &operator<<(std::ostream &os, unsigned __int128 x);
+// CONSTANTS
+const double pi = M_PI;
+
 
 // CLASSES AND STRUCTURES
 enum class ShapeKind
@@ -86,6 +87,11 @@ struct Point2D {
 };
 
 
+// PROTOTYPES
+std::ostream &operator<<(std::ostream &os, unsigned __int128 x);
+
+
+
 
 // MAIN
 int main()
@@ -97,6 +103,18 @@ int main()
     */
     unsigned __int128 x = 4;
     std::cout << x << " Hello world." << std::endl;
+
+    std::vector<double> storage {};
+    for(int i {0}; i < storage.size(); i++) {
+        double x = storage[i];
+        double ans = 2*cos(x) + sin(2*x);
+
+        std::stringstream ss;
+        ss << "f(" << x << ") = " << ans << std::endl;
+        cout << ss.str();
+        
+    }
+    
     int arr[] = {1, 9, 7, 3, 2, 5};
     cout << *(arr + 2);
     *(arr + 2) = 6;

@@ -33,6 +33,11 @@ POST SUBMISSION QUESTIONS:
 
 */
 
+
+// CONSTANTS
+const double pi = M_PI;
+
+
 // CLASSES AND STRUCTURES
 
 
