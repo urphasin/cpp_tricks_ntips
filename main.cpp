@@ -104,7 +104,7 @@ int main()
     unsigned __int128 x = 4;
     std::cout << x << " Hello world." << std::endl;
 
-    std::vector<double> storage {};
+    std::vector<double> storage {0, pi/6, pi/2};
     for(int i {0}; i < storage.size(); i++) {
         double x = storage[i];
         double ans = 2*cos(x) + sin(2*x);
