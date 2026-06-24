@@ -135,7 +135,30 @@ std::ostream& operator<<(std::ostream& os, Fraction f) {
     os << f.num << "/" << f.den << std::endl;
     return os;
 }
+Fraction limit_denominator(double value, long long max_den = 1'000'000) {
+    long long a = std::floor(value);
 
+    long long h1 = 1, k1 = 0;
+    long long h = a, k = 1;
+
+    double frac = value;
+
+    while ( std::fabs(value - static_cast<double>(h) / k) > 1e-12 && k < max_den ) {
+        frac = 1.0 / (frac - a);
+        a = std::floor(frac);
+
+        long long h2 = h1;
+        h1 = h;
+
+        long long k2 = k1;
+        k1 = k;
+
+        h = a * h1 + h2;
+        k = a * k1 + k2;
+    }
+
+    return {h, k};
+}
 
 
 
