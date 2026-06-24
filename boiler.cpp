@@ -46,17 +46,10 @@ struct Fraction {
 
 //##############################
 
-// PROTOTYPES
+// FUNCTION PROTOTYPES
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
 std::ostream& operator<<(std::ostream& os, Fraction f);
-Fraction limit_denominator(double value, long long max_den = 1'000'000);
-
-//##############################
-
-// FUNCTION TEMPLATES DEFINITIONS
-template <typename OP>
 Fraction limit_denominator(double value, long long max_den = 1'000'000L);
-
 
 //##############################
 
@@ -123,7 +116,7 @@ int main() {
 
 //##############################
 
-// DEFINITIONS
+// FUNCTION DEFINITIONS
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x) {
     
     if (x == 0) {
