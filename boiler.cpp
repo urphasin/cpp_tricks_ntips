@@ -39,12 +39,17 @@ const double pi = M_PI;
 
 
 // CLASSES AND STRUCTURES
+struct Fraction {
+    long long num;
+    long long den;
+};
 
 
 
 
 // PROTOTYPES
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
+std::ostream& operator<<(std::ostream& os, Fraction f);
 
 template <typename OP>
 void print_vector(vector<OP> arr) {
