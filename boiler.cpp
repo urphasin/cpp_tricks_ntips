@@ -43,14 +43,12 @@ struct Fraction {
     long long num;
     long long den;
 };
-
-
-
-
+//##############################
 // PROTOTYPES
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
 std::ostream& operator<<(std::ostream& os, Fraction f);
-
+//##############################
+// FUNCTION TEMPLATES DEFINITIONS
 template <typename OP>
 void print_vector(vector<OP> arr) {
     for (auto i : arr) {
@@ -125,8 +123,10 @@ std::ostream& operator<<(std::ostream& os, unsigned __int128 x) {
     os << s;
     return os;
 }
-
-
+std::ostream& operator<<(std::ostream& os, Fraction f) {
+    os << f.num << "/" << f.den << std::endl;
+    return os;
+}
 
 
 
