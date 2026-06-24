@@ -105,7 +105,7 @@ int main() {
     *(arr + 2) = 6;
     cout << *(arr + 2) << endl;
 
-    double d = 0.3333333333333;
+    double d = 0.123123412345;
     Fraction f = limit_denominator(d);
     cout << f << endl;
 
