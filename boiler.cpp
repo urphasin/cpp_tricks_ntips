@@ -55,6 +55,13 @@ Fraction limit_denominator(double value, long long max_den = 1'000'000);
 
 // FUNCTION TEMPLATES DEFINITIONS
 template <typename OP>
+Fraction limit_denominator(double value, long long max_den = 1'000'000L);
+
+
+//##############################
+
+// FUNCTION TEMPLATES DEFINITIONS
+template <typename OP>
 void print_vector(vector<OP> arr) {
     for (auto i : arr) {
         std::cout << i << ", ";
@@ -105,6 +112,10 @@ int main() {
     *(arr + 2) = 6;
     cout << *(arr + 2) << endl;
 
+    double d = 0.3333333333333;
+    Fraction f = limit_denominator(d);
+    cout << f << endl;
+
 
 
     return 0;
@@ -114,6 +125,7 @@ int main() {
 
 // DEFINITIONS
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x) {
+    
     if (x == 0) {
         os << '0';
         return os;
@@ -135,7 +147,7 @@ std::ostream& operator<<(std::ostream& os, Fraction f) {
     os << f.num << "/" << f.den << std::endl;
     return os;
 }
-Fraction limit_denominator(double value, long long max_den = 1'000'000) {
+Fraction limit_denominator(double value, long long max_den) {
     long long a = std::floor(value);
 
     long long h1 = 1, k1 = 0;
