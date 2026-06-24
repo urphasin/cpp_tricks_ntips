@@ -43,11 +43,16 @@ struct Fraction {
     long long num;
     long long den;
 };
+
 //##############################
+
 // PROTOTYPES
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
 std::ostream& operator<<(std::ostream& os, Fraction f);
+Fraction limit_denominator(double value, long long max_den = 1'000'000);
+
 //##############################
+
 // FUNCTION TEMPLATES DEFINITIONS
 template <typename OP>
 void print_vector(vector<OP> arr) {
@@ -78,12 +83,14 @@ void print_unordered_map(std::unordered_map<O, P> table) {
     std::cout << std::endl;
 }
 
+//##############################
 
 // solve
 void solve() {
 
 }
 
+//##############################
 
 // MAIN
 int main() {
@@ -103,6 +110,7 @@ int main() {
     return 0;
 }
 
+//##############################
 
 // DEFINITIONS
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x) {
