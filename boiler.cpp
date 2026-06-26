@@ -1,3 +1,4 @@
+#include <sstream>
 #include <iostream>
 // #include <type_traits> // c++20
 // #include <random>
@@ -46,14 +47,17 @@ struct Fraction {
 
 //##############################
 
-// FUNCTION PROTOTYPES
+// Default Prototypes
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
 std::ostream& operator<<(std::ostream& os, Fraction f);
 Fraction limit_denominator(double value, long long max_den = 1'000'000L);
 
+// New Prototypes
+
+
 //##############################
 
-// FUNCTION TEMPLATES DEFINITIONS
+// Default Template Definitions
 template <typename OP>
 void print_vector(vector<OP> arr) {
     for (auto i : arr) {
@@ -83,6 +87,9 @@ void print_unordered_map(std::unordered_map<O, P> table) {
     std::cout << std::endl;
 }
 
+// New Templatate Definitions
+
+
 //##############################
 
 // solve
@@ -109,6 +116,7 @@ int main() {
     Fraction f = limit_denominator(d);
     cout << f << endl;
 
+    // Write below this line
 
 
     return 0;
@@ -116,7 +124,7 @@ int main() {
 
 //##############################
 
-// FUNCTION DEFINITIONS
+// Default Definitions
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x) {
     
     if (x == 0) {
@@ -165,5 +173,5 @@ Fraction limit_denominator(double value, long long max_den) {
     return {h, k};
 }
 
-
+// New Definitions
 
