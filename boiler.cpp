@@ -39,11 +39,13 @@ POST SUBMISSION QUESTIONS:
 const double pi = M_PI;
 
 
-// CLASSES AND STRUCTURES
+// Default Classes and Structs
 struct Fraction {
     long long num;
     long long den;
 };
+
+// New Classes and Structs
 
 //##############################
 
