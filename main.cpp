@@ -91,6 +91,25 @@ void solve() {
 
 }
 
+// Write below this line
+long long nCr(double n, double r) {
+  if (r > n || r < 0 || n < 0) {
+    return 0;
+  }
+
+  long long result = 1;
+  for (int i = 0, j = r; i < r; i++, j--) {
+    result *= (n - i) / j;
+  }
+  return result;
+}
+
+double binomial(double p, double n, double r) {
+  double ans = nCr(n, r) * pow(p, r) * pow((1 - p), n-r);
+  return ans;
+}
+
+
 //##############################
 
 // MAIN
@@ -111,12 +130,9 @@ int main() {
     cout << f << endl;
 
     // Write below this line
-    vector<double> v1 {1.0/2.0};
-    for (auto x : v1) {
-        double ans = 45 * pow(1.0/2.0, 2) * pow(1.0/2.0, 8);
-        cout << ans << endl;
-    }
+    printf("P(X) = %lf", binomial(0.9, 3, 1));
     std::cin.get();
+
 
 
     return 0;
