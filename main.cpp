@@ -1,3 +1,4 @@
+#include <sstream>
 #include <iostream>
 // #include <type_traits> // c++20
 // #include <random>
