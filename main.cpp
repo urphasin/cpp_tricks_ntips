@@ -111,12 +111,10 @@ int main() {
     cout << f << endl;
 
     // Write below this line
-    vector<int> v1 {-1, 1};
+    vector<double> v1 {1.0/2.0};
     for (auto x : v1) {
-        double ans = 1 - std::pow(std::cbrt(x), 2);
-        std::stringstream ss;
-        ss << "f(" << x << ") = " << ans << endl; 
-        std::cout << ss.str();
+        double ans = 45 * pow(1.0/2.0, 2) * pow(1.0/2.0, 8);
+        cout << ans << endl;
     }
     std::cin.get();
 
