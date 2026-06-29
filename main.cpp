@@ -110,7 +110,14 @@ int main() {
     cout << f << endl;
 
     // Write below this line
-    
+    vector<int> v1 {-1, 1};
+    for (auto x : v1) {
+        double ans = 1 - std::pow(std::cbrt(x), 2);
+        std::stringstream ss;
+        ss << "f(" << x << ") = " << ans << endl; 
+        std::cout << ss.str();
+    }
+    std::cin.get();
 
 
     return 0;
