@@ -138,6 +138,7 @@ int main() {
     printf("P(X) = %lf\n\n", binomial(0.9, 3, 1));
     f({-3, 3});
     m1({-3, -1, 1, 3});
+    m2({-2, 0, 2});
 
     std::cin.get();
 
