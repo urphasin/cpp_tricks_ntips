@@ -133,8 +133,8 @@ void m2(vector<double> d) {
 int main() {
     // Write below this line
     printf("P(X) = %lf\n\n", binomial(0.9, 3, 1));
-    f({10});
-    m1({9, 11});
+    f({1, 10});
+    m1({0, 9, 11});
     std::cin.get();
 
     return 0;
