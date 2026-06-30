@@ -114,6 +114,24 @@ double binomial(double p, double n, double r) {
   double ans = nCr(n, r) * pow(p, r) * pow((1 - p), n-r);
   return ans;
 }
+void f(vector<double> d) {
+    for (auto x : d) {
+        double ans =  x - 6*pow((x - 1), 1.0/2.0); 
+        cout << "f(" << x << ") = " << ans << endl;
+    }
+}
+void m1(vector<double> d) {
+    for (auto x : d) {
+        double ans = 1 - (3 / pow((x - 1), 1.0/2.0));
+        cout << "f'(" << x << ") = " << ans << endl;
+    }
+}
+void m2(vector<double> d) {
+    for (auto x : d) {
+        double ans = x;
+        cout << "f''(" << x << ") = " << ans << endl;
+    }
+}
 
 
 // solve

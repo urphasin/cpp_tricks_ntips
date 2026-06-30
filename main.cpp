@@ -107,15 +107,25 @@ double binomial(double p, double n, double r) {
 
 
 // solve
-void solve(vector<double> d) {
+void f(vector<double> d) {
     for (auto x : d) {
-        double ans =    2*pow(x, 3)    -
-                        15*pow(x, 2)   +
-                        24*x           -
-                        7;
+        double ans =  x - 6*pow((x - 1), 1.0/2.0); 
         cout << "f(" << x << ") = " << ans << endl;
     }
 }
+void m1(vector<double> d) {
+    for (auto x : d) {
+        double ans = 1 - (3 / pow((x - 1), 1.0/2.0));
+        cout << "f'(" << x << ") = " << ans << endl;
+    }
+}
+void m2(vector<double> d) {
+    for (auto x : d) {
+        double ans = x;
+        cout << "f''(" << x << ") = " << ans << endl;
+    }
+}
+
 
 //##############################
 
@@ -123,7 +133,8 @@ void solve(vector<double> d) {
 int main() {
     // Write below this line
     printf("P(X) = %lf\n\n", binomial(0.9, 3, 1));
-    solve({1, 2.5, 4});
+    f({10});
+    m1({9, 11});
     std::cin.get();
 
     return 0;
