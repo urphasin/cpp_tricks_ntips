@@ -86,14 +86,6 @@ void print_unordered_map(std::unordered_map<O, P> table) {
 
 //##############################
 
-// solve
-void solve(vector<double> d) {
-    for (auto x : d) {
-        double ans = (x - 1)*(x - 1)*(x - 3)*(x - 3)*(x - 3);
-        cout << "f(" << x << ") = " << ans << endl;
-    }
-}
-
 // Write below this line
 long long nCr(double n, double r) {
   if (r > n || r < 0 || n < 0) {
@@ -113,31 +105,23 @@ double binomial(double p, double n, double r) {
 }
 
 
+
+// solve
+void solve(vector<double> d) {
+    for (auto x : d) {
+        double ans = pow(x, 2) * pow((3 - x), 1.0/2.0);
+        cout << "f(" << x << ") = " << ans << endl;
+    }
+}
+
 //##############################
 
 // MAIN
 int main() {
-    /*
-    unsigned __int128 is a compiler extension (mainly GCC/Clang), 
-    not a standard C++ integer type, 
-    so the standard stream operators (<<) were never overloaded for it.
-    */
-    unsigned __int128 x = 4;
-    // std::cout << x << std::endl;
-    int arr[] = {1, 9, 7, 3, 2, 5};
-    *(arr + 2) = 6;
-    cout << *(arr + 2) << endl;
-
-    double d = 0.2093023255814;
-    Fraction f = limit_denominator(d);
-    cout << f << endl;
-
     // Write below this line
     printf("P(X) = %lf\n\n", binomial(0.9, 3, 1));
-    solve({0, 2});
+    solve({-1, 0, 12.0/5.0, 3});
     std::cin.get();
-
-
 
     return 0;
 }
