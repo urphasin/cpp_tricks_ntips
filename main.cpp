@@ -87,8 +87,11 @@ void print_unordered_map(std::unordered_map<O, P> table) {
 //##############################
 
 // solve
-void solve() {
-
+void solve(vector<double> d) {
+    for (auto x : d) {
+        double ans = (x - 1)*(x - 1)*(x - 3)*(x - 3)*(x - 3);
+        cout << "f(" << x << ") = " << ans << endl;
+    }
 }
 
 // Write below this line
@@ -130,7 +133,8 @@ int main() {
     cout << f << endl;
 
     // Write below this line
-    printf("P(X) = %lf", binomial(0.9, 3, 1));
+    printf("P(X) = %lf\n\n", binomial(0.9, 3, 1));
+    solve({0, 2 });
     std::cin.get();
 
 
