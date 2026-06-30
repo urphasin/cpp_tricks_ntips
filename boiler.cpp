@@ -116,22 +116,26 @@ double binomial(double p, double n, double r) {
 }
 void f(vector<double> d) {
     for (auto x : d) {
-        double ans =  x - 6*pow((x - 1), 1.0/2.0); 
-        cout << "f(" << x << ") = " << ans << endl;
+        double ans =  pow(x, 4) - 8*x*x + 1; 
+        cout << "f(" << x << ") = " << ans << ",\t";
     }
+    cout << endl;
 }
 void m1(vector<double> d) {
     for (auto x : d) {
-        double ans = 1 - (3 / pow((x - 1), 1.0/2.0));
-        cout << "f'(" << x << ") = " << ans << endl;
+        double ans = 4*pow(x, 3) - 16*x;
+        cout << "f'(" << x << ") = " << ans << ",\t";
     }
+    cout << endl;
 }
 void m2(vector<double> d) {
     for (auto x : d) {
-        double ans = x;
-        cout << "f''(" << x << ") = " << ans << endl;
+        double ans = 12*x*x - 16;
+        cout << "f''(" << x << ") = " << ans << ",\t";
     }
+    cout << endl;
 }
+
 
 
 // solve
