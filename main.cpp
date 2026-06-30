@@ -134,7 +134,7 @@ int main() {
 
     // Write below this line
     printf("P(X) = %lf\n\n", binomial(0.9, 3, 1));
-    solve({0, 2 });
+    solve({0, 2});
     std::cin.get();
 
 

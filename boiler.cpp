@@ -96,13 +96,30 @@ void print_unordered_map(std::unordered_map<O, P> table) {
 
 //##############################
 
-// solve
-void solve() {
 
+// Write below this line.
+long long nCr(double n, double r) {
+  if (r > n || r < 0 || n < 0) {
+    return 0;
+  }
+
+  long long result = 1;
+  for (int i = 0, j = r; i < r; i++, j--) {
+    result *= (n - i) / j;
+  }
+  return result;
+}
+
+double binomial(double p, double n, double r) {
+  double ans = nCr(n, r) * pow(p, r) * pow((1 - p), n-r);
+  return ans;
 }
 
 
-// Write below this line.
+// solve
+void solve() {
+    
+}
 
 
 //##############################
