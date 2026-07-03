@@ -19,8 +19,8 @@ int main() {
   6. long long
   */
   
-  printf("int : %zu bytes.\n", sizeof(int));
-  printf("char : %zu bytes.\n", sizeof(char));
+  printf("int* : %zu bytes.\n", sizeof(int*));
+  printf("char* : %zu bytes.\n", sizeof(char*));
   printf("float : %zu bytes.\n", sizeof(float));
   printf("double : %zu bytes.\n", sizeof(double));
   printf("long : %zu bytes.\n", sizeof(long));
@@ -28,6 +28,20 @@ int main() {
 
   char* name = "otito amuga\n wise w\tor\t\tds";
   printf("%s\n", name);
+
+  // Pointer is a derived type in C. Pointers are type constructors based on other types
+  /*
+      You have:
+
+      int * → pointer to int
+      char * → pointer to char
+      double * → pointer to double
+      struct Node * → pointer to struct Node
+
+      So the pointer “type” is always:
+
+      pointer-to-some-type
+  */
   
   
   return 0;
