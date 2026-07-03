@@ -9,6 +9,22 @@
 int main() {
 
   // Write below this line
+  /* 
+      Data Types
+  1. int
+  2. char
+  3. float
+  4. double
+  5. long
+  6. long long
+  */
+  
+  printf("int : %zu bytes.\n", sizeof(int));
+  printf("char : %zu bytes.\n", sizeof(char));
+  printf("float : %zu bytes.\n", sizeof(float));
+  printf("double : %zu bytes.\n", sizeof(double));
+  printf("long : %zu bytes.\n", sizeof(long));
+  printf("long long: %zu bytes.\n", sizeof(long long));
   
   
   return 0;
