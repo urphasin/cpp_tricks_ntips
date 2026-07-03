@@ -9,6 +9,17 @@
 int main() {
 
   // Write below this line
+    /* 
+      Data Types
+  1. int
+  2. char
+  3. float
+  4. double
+  5. long
+  6. long long
+  7. unsigned __int128
+  */
+  
   
   
   return 0;
