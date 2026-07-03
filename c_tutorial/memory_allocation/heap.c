@@ -31,6 +31,7 @@ int main() {
   printf("double : %zu bytes.\n", sizeof(double));
   printf("long : %zu bytes.\n", sizeof(long));
   printf("long long:* %zu bytes.\n", sizeof(long long*));
+  printf("unsigned __int128 : %zu bytes.\n", sizeof(unsigned __int128));
 
   char* name = "otito amuga\n wise w\tor\t\tds";
   printf("%s\n", name);
