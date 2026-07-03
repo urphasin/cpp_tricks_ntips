@@ -22,6 +22,7 @@ int main() {
   4. double
   5. long
   6. long long
+  7. unsigned __int128
   */
   
   printf("int* : %zu bytes.\n", sizeof(int*));
@@ -29,10 +30,12 @@ int main() {
   printf("float : %zu bytes.\n", sizeof(float));
   printf("double : %zu bytes.\n", sizeof(double));
   printf("long : %zu bytes.\n", sizeof(long));
-  printf("long long: %zu bytes.\n", sizeof(long long));
+  printf("long long:* %zu bytes.\n", sizeof(long long*));
 
   char* name = "otito amuga\n wise w\tor\t\tds";
   printf("%s\n", name);
+
+  unsigned __int128 x;
 
   // Pointer is a derived type in C. Pointers are type constructors based on other types
   /*
