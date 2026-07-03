@@ -26,7 +26,7 @@ int main() {
   printf("long : %zu bytes.\n", sizeof(long));
   printf("long long: %zu bytes.\n", sizeof(long long));
 
-  char* name = "Evan";
+  char* name = "otito amuga\n wise w\tor\t\tds";
   printf("%s\n", name);
   
   
