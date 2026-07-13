@@ -24,7 +24,6 @@ double m2(double x)
     return ans;
     // cout << "f''(" << x << ") = " << ans << ",\t";
 }
-
 void NewtonMethod()
 {
     std::cout << 
@@ -43,6 +42,8 @@ void NewtonMethod()
     }
     cout << std::setprecision(6) << endl;
 }
+
+
 
 int main() {
 
