@@ -114,26 +114,42 @@ double binomial(double p, double n, double r) {
   double ans = nCr(n, r) * pow(p, r) * pow((1 - p), n-r);
   return ans;
 }
-void f(vector<double> d) {
-    for (auto x : d) {
-        double ans =  pow(x, 4) - 8*x*x + 1; 
-        cout << "f(" << x << ") = " << ans << ",\t";
-    }
-    cout << endl;
+double f(double x)
+{
+  double ans = cos(pow(x, 2) - x) - pow(x, 4);
+  return ans;
+  // cout << "f(" << x << ") = " << ans << ",\t";
 }
-void m1(vector<double> d) {
-    for (auto x : d) {
-        double ans = 4*pow(x, 3) - 16*x;
-        cout << "f'(" << x << ") = " << ans << ",\t";
-    }
-    cout << endl;
+double m1(double x)
+{
+  double ans = -sin(pow(x, 2) - x) * (2 * x - 1) - 4 * pow(x, 3);
+  return ans;
+  // cout << "f'(" << x << ") = " << ans << ",\t";
 }
-void m2(vector<double> d) {
-    for (auto x : d) {
-        double ans = 12*x*x - 16;
-        cout << "f''(" << x << ") = " << ans << ",\t";
+double m2(double x)
+{
+    double ans = -2 * (cos(x) + pow(cos(x), 2) - pow(sin(x), 2));
+    return ans;
+    // cout << "f''(" << x << ") = " << ans << ",\t";
+}
+
+void NewtonMethod()
+{
+    std::cout << 
+    std::fixed <<
+    std::setprecision(21);
+    double xn = -0.5;
+    for (int i = 0; i < 10; i++)
+    {
+        if (std::abs(m1(xn)) < 1e-12)
+        {
+            std::cout << "Derivative too small\n";
+            return;
+        }
+        xn = xn - (f(xn) / m1(xn));
+        cout << xn << ", ";
     }
-    cout << endl;
+    cout << std::setprecision(6) << endl;
 }
 
 
