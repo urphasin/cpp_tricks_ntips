@@ -8,13 +8,13 @@ using namespace std;
 
 double f(double x)
 {
-  double ans = cos(pow(x, 2) - x) - pow(x, 4);
+  double ans = pow(x, 4) - 75;
   return ans;
   // cout << "f(" << x << ") = " << ans << ",\t";
 }
 double m1(double x)
 {
-  double ans = -sin(pow(x, 2) - x) * (2 * x - 1) - 4 * pow(x, 3);
+  double ans = 4*pow(x, 3);
   return ans;
   // cout << "f'(" << x << ") = " << ans << ",\t";
 }
@@ -29,7 +29,7 @@ void NewtonMethod()
     std::cout << 
     std::fixed <<
     std::setprecision(21);
-    double xn = -0.5;
+    double xn = 2.5;
     for (int i = 0; i < 10; i++)
     {
         if (std::abs(m1(xn)) < 1e-12)
@@ -49,4 +49,5 @@ int main() {
 
   int x = add(5, 7);
   std::cout << x << "\n";
+  NewtonMethod();
 }
