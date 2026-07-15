@@ -53,8 +53,8 @@ int main() {
   std::cout << x << "\n";
 
   double ans = 0;
-  for(int i = -1; i <= 1; i++) {
-    ans += (pow(-1, i) / (i + 2) ); 
+  for(int i = 0; i <= 5; i++) {
+    ans += (pow(-1, i) * pow(2, i)); 
   }
   stringstream ss;
   ss << "ans is " << ans;
