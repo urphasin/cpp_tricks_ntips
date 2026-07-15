@@ -3,18 +3,20 @@
 #include <iomanip>
 #include <vector>
 #include <string>
+#include <sstream>
 #include "include/playlist.hpp"
+
 using namespace std;
 
 double f(double x)
 {
-  double ans = 5*cos(x) - x - 1;
+  double ans = pow(x, 3) - 3*x + 6;
   return ans;
   // cout << "f(" << x << ") = " << ans << ",\t";
 }
 double m1(double x)
 {
-  double ans = -5*sin(x) - 1;
+  double ans = 3*pow(x, 2) - 3;
   return ans;
   // cout << "f'(" << x << ") = " << ans << ",\t";
 }
@@ -29,7 +31,7 @@ void NewtonMethod()
     std::cout << 
     std::fixed <<
     std::setprecision(6);
-    double xn = 1.13;
+    double xn = 1;
     for (int i = 0; i < 10; i++)
     {
         if (std::abs(m1(xn)) < 1e-12)
@@ -49,6 +51,19 @@ int main() {
 
   int x = add(5, 7);
   std::cout << x << "\n";
-  cout << "f is : " << f(3) << endl;
-  NewtonMethod();
+
+  double ans = 0;
+  for(int i = -1; i <= 1; i++) {
+    ans += (pow(-1, i) / (i + 2) ); 
+  }
+  stringstream ss;
+  ss << "ans is " << ans;
+
+  std::cout << 
+  fixed <<
+  setprecision(10) <<
+  ss.str() << 
+  setprecision(6) <<
+  endl;
+  
 }
