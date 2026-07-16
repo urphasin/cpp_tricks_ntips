@@ -4,10 +4,13 @@
 #include <iostream>
 #include <vector>
 #include <string>
-using namespace std;
 
 class Phone {
-  
+  private:
+    std::string name;
+
+  public:
+    const std::string& accessName() const;
 };
 
 #endif
