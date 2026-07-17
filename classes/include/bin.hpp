@@ -14,14 +14,13 @@ class Bin {
     short count;
   public:
     // constructor
-    Bin(vector<short> trash1);
+    Bin();
+    Bin(vector<short> trash);
 
     // member functions
-    void printInfo() {
-      // Works perfectly here (inside function scope)
-      using std::cout; 
-      cout << "Printing bin details...\n";
-    }
+    void addTrash(short trash);
+    void addTrash(vector<short> trash);
+    void printInfo();
 
     // operator overloaded member function
     short operator++();
