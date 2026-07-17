@@ -19,6 +19,6 @@ class Bin {
     // operator overloaded member function
     short operator++();
     friend std::ostream& operator<<(
-      std::ostream& out, Bin& bin
+      std::ostream& out, const Bin& bin
     );
 };
