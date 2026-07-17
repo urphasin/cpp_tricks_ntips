@@ -8,5 +8,8 @@ short Bin::operator++() {
 }
 
 ostream& operator<<(ostream& out, const Bin& bin) {
-
+  for (auto i : bin.numbers){
+    out << i << ", ";
+  }
+  return out;
 }
