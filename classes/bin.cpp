@@ -1,7 +1,9 @@
 #include "include/bin.hpp"
 
 using std::ostream;
-using std::cout; // Perfectly legal at the top of a .cpp file
+
+// Perfectly legal at the top of a .cpp file
+using std::cout; 
 
 short Bin::operator++() {
   return 0; 

@@ -18,7 +18,8 @@ class Bin {
 
     // member functions
     void printInfo() {
-      using std::cout; // Works perfectly here (inside function scope)
+      // Works perfectly here (inside function scope)
+      using std::cout; 
       cout << "Printing bin details...\n";
     }
 
