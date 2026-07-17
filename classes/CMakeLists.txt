@@ -8,7 +8,7 @@ include_directories(include)
 
 # Copies data files from resources/ to build/ so programs can open them by name.
 # Re-run cmake .. if you add new files to resources/.
-file(COPY ${CMAKE_SOURCE_DIR}/resources/ DESTINATION ${CMAKE_BINARY_DIR})
+# file(COPY ${CMAKE_SOURCE_DIR}/resources/ DESTINATION ${CMAKE_BINARY_DIR})
 
 # Project structure:
 #   - Header files (.h)  → include/
