@@ -12,7 +12,7 @@ class Bin {
     vector<short> numbers;
     short count;
   public:
-  
+  0
   
     Bin(vector<short> trash1);
     // operator overloaded member function

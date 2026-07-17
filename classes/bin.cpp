@@ -1,5 +1,5 @@
 #include "include/bin.hpp"
 
-int Bin::operator++() {
-  return 
+short Bin::operator++() {
+  return 0; 
 }
