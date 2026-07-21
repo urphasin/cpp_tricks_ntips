@@ -47,8 +47,8 @@ void solve() {
 
 // MAIN
 int main() {
-
   // Write below this line
+  
   
   return 0;
 }
