@@ -34,7 +34,6 @@ const std::string endColor = "\x1b[0m";
 const std::string yellow = "\x1b[1;93m";
 
 
-// Default Classes and Structs
 
 
 // solve
