@@ -35,12 +35,16 @@ const std::string yellow = "\x1b[1;93m";
 
 
 // Default Classes and Structs
+class Shape {
+  public:
 
+  /*
+  10 things about virtual functions
+  ---------------------------------
+  1. You can't instantiate a class with virtual.
+  */ 
 
-// solve
-void solve() {
-    
-}
+};
 
 //##############################
 
