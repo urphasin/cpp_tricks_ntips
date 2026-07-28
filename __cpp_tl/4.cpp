@@ -57,12 +57,29 @@ class DistanceClass {
 // MAIN
 int main() {
   // Write below this line
+  DistanceClass object1;
+  DistanceClass object2{1, 2};
+
+  DistanceClass clone1Type1 = object1;
+  DistanceClass clone1Type2(object1);
+
+  DistanceClass clone2Type1 = object2;
+  DistanceClass clone2Type2(object2);
   
-  
+
+  //show
+  object1.show();
+  object2.show();
+
+  clone1Type1.show();
+  clone1Type2.show();
+
+  clone2Type1.show();
+  clone2Type2.show();
   
   return 0;
 }
 
-// g++ 0.cpp -o ans && ./ans && rm -rf ./ans 
+// g++ 4.cpp -o ans && ./ans && rm -rf ./ans 
 
 
