@@ -27,23 +27,30 @@
 #include <memory>
 using namespace std;
 
-
 // CONSTANTS
 const double pi = M_PI;
 const std::string endColor = "\x1b[0m";
 const std::string yellow = "\x1b[1;93m";
 
 
-
-
-
+class Parent {
+public:
+  void foo() { cout << "Parent Foo\n"; };
+};
+class Child1 : public Parent {
+public:
+  void foo() { cout << "Child1 Foo\n"; }
+};
+class Child2 : public Parent {};
+class GrandChild : public Child1, public Child2 {};
 
 //##############################
 
 // MAIN
 int main() {
   // Write below this line
-  
+  GrandChild d;
+  d.foo();
   
   
   return 0;
