@@ -4,14 +4,14 @@ using namespace std;
 class Animal {
 public:
     virtual void fly() {
-        cout << "Animal Flying\n";
+      cout << "Animal Flying\n";
     }
 };
 
 class Bird {
 public:
     virtual void fly() {
-        cout << "Bird Flying\n";
+      cout << "Bird Flying\n";
     }
 };
 
