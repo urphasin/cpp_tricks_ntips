@@ -40,17 +40,17 @@ class DistanceClass {
     int inches;
 
   public:
+    DistanceClass() : feet(0), inches(0) {}
+    DistanceClass(int f, int n) : 
+                  feet(f), inches(n) {}
+    void add(const DistanceClass& d) {
+      inches += d.inches;
+      feet   += d.feet;
+    }                
     void show() {
       cout << feet << "' " << inches << "\"" << endl;
     }
 };
-
-
-// solve
-void solve() {
-    
-}
-
 
 //##############################
 

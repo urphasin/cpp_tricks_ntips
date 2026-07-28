@@ -36,10 +36,6 @@ const std::string yellow = "\x1b[1;93m";
 
 
 
-// solve
-void solve() {
-    
-}
 
 
 //##############################
