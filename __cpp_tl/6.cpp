@@ -34,23 +34,7 @@ const std::string endColor = "\x1b[0m";
 const std::string yellow = "\x1b[1;93m";
 
 
-class A {
-  public:
-    void call() {
-      cout << "A call" << endl;
-    }
-};
 
-class B {
-  public:
-    virtual void call() {
-      cout << "B call" << endl;
-    }
-};
-
-class C : public A, public B {
-  
-};
 
 
 
@@ -59,15 +43,12 @@ class C : public A, public B {
 // MAIN
 int main() {
   // Write below this line
-  C c;
-
-  c.B::call();
-  c.A::call();
+  
   
   
   return 0;
 }
 
-// g++ 5.cpp -o ans && ./ans && rm -rf ./ans 
+// g++ 6.cpp -o ans && ./ans && rm -rf ./ans 
 
 
