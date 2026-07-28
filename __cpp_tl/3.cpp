@@ -28,3 +28,5 @@ int main() {
     d.fly();
     d.fly();
 }
+
+// g++ 0.cpp -o ans && ./ans && rm -rf ./ans 
