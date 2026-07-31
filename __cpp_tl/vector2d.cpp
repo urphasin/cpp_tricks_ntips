@@ -13,5 +13,5 @@ Vector2D Vector2D::operator+(const Vector2D& v) const {
   double tempX = this->x + v.x;
   double tempY = this->y + v.y;
 
-  return {x, y};
+  return {tempX, tempY};
 }
