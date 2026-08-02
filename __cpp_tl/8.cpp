@@ -23,7 +23,7 @@ double divide(double number, double by) {
 int main() {
   try {
     cout << divide(5, 0) << endl;
-  } catch(DivisionByZero d) {
+  } catch(DivisionByZero& d) {
     cerr << d.what() << endl;
   }
 }
