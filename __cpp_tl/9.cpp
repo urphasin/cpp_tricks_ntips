@@ -37,7 +37,7 @@ public:
   }
 
   void* operator new(size_t s) {
-    cout << "Allocating " << s << " bytes\n";
+    cout << "Girl object -> Allocating " << s << " bytes\n";
     return malloc(s);
   }
 };
