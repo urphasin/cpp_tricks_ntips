@@ -1,6 +1,7 @@
 #include <memory>
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -38,9 +39,11 @@ public:
 
 int main() {
 
-  unique_ptr<Girl> girls[2] = { make_unique<Girl>(), make_unique<Girl>("Female", "Jacky", 19, 5.8) };
+  unique_ptr<Girl> girls1[2] = { make_unique<Girl>(), make_unique<Girl>("Female", "Jacky", 19, 5.8) };
+
+  vector<unique_ptr<Girl>> girls2(2);
   
   Girl g1;
-  Girl g2("Female", "Alice", 20, 5.6);
+
   return 0;
 }
