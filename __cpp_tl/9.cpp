@@ -42,7 +42,7 @@ int main() {
   unique_ptr<Girl> girls1[2] = { make_unique<Girl>(), make_unique<Girl>("Female", "Jacky", 19, 5.8) };
 
   vector<unique_ptr<Girl>> girls2(2);
-  
+
   Girl g1;
 
   return 0;
