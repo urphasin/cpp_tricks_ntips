@@ -1,3 +1,4 @@
+#include <fstream>
 #include <sstream>
 #include <iostream>
 // #include <type_traits> // c++20
@@ -25,6 +26,7 @@
 #include <functional>
 #include <utility>
 #include <memory>
+#include <stdexcept>
 using namespace std;
 
 /*
