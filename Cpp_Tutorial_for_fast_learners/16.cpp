@@ -19,3 +19,11 @@ private:
   K key;
   V value;
 };
+
+int main() {
+
+  Pair<int, int> pair1(5, 6);
+  pair1.setKey(20);
+  cout << pair1.getKey() << "  :  " << pair1.getValue() << "\n\n";
+  
+}
