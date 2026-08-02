@@ -35,6 +35,11 @@ public:
     cout << "Age: " << age << '\n';
     cout << "Height: " << height << '\n';
   }
+
+  void* operator new(size_t s) {
+    cout << "Allocating " << s << " bytes\n";
+    return malloc(s);
+  }
 };
 
 int main() {
@@ -43,7 +48,7 @@ int main() {
 
   vector<unique_ptr<Girl>> girls2(2);
 
-  Girl g1;
+  // Girl g1;
 
   return 0;
 }
