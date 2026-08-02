@@ -7,8 +7,8 @@
 
 using namespace std;
 
-double divide(double number, double by){
-  if(by == 0){
+double divide(double number, double by) {
+  if (by == 0) {
     throw runtime_error("divide by zero");
   }
 
@@ -23,10 +23,11 @@ int main() {
   cout << "Enter an other double number to divide " << m << " by: ";
   cin >> n;
   try {
-    cout << m << " / "  << n << ": " << divide(m, n) << endl;
+    cout << m << " / " << n << ": " << divide(m, n) << endl;
     cout << "DONE!\n";
-  }catch(runtime_error& ex){
-      cerr << "Exception occurred: " << ex.what();
+  }
+  catch (runtime_error& ex) {
+    cerr << "Exception occurred: " << ex.what();
   }
 
   return 0;
