@@ -36,14 +36,14 @@ const std::string yellow = "\x1b[1;93m";
 
 // Default Classes and Structs
 class Shape {
-  public:
+public:
 
   /*
   10 things about virtual functions
   ---------------------------------
   1. You can't instantiate a class with virtual.
-  
-  */ 
+
+  */
 
 };
 
@@ -52,10 +52,10 @@ class Shape {
 // MAIN
 int main() {
   // Write below this line
-  
-  
 
-  
+
+
+
   return 0;
 }
 
