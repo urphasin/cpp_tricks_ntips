@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdexcept>
 #include <iomanip>
 #include <fstream>
 #include <string>
@@ -8,7 +9,7 @@ using namespace std;
 
 double divide(double number, double by){
   if(by == 0){
-    throw by;
+    throw runtime_error("divide by zero");
   }
 
   return number / by;
@@ -19,13 +20,14 @@ int main() {
 
   cout << "Enter a double number: ";
   cin >> m;
-  cout << "Enter another double number to divide " << m << " by: ";
+  cout << "Enter an other double number to divide " << m << " by: ";
   cin >> n;
-  cout << m << " / "  << n << ": " << divide(m, n) << endl;
-  cout << "DONE!\n";
-
-  double y = divide(m, n);
-  cout << y + 1 << endl;
+  try {
+    cout << m << " / "  << n << ": " << divide(m, n) << endl;
+    cout << "DONE!\n";
+  }catch(runtime_error& ex){
+      cerr << "Exception occurred: " << ex.what();
+  }
 
   return 0;
 }
