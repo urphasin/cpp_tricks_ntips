@@ -22,8 +22,8 @@ public:
 
 
 int main() {
-  cout << sizeof(Human) << "\n";
-  cout << sizeof(Girl) << "\n";
+  cout << sizeof(Human) << " bytes\n";
+  cout << sizeof(Girl) << " bytes\n";
 
 
   Human* h = new Girl();
