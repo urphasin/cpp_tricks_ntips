@@ -20,10 +20,18 @@ int main() {
   a.show();
 
   
-  A<string>* b = new A((string)"James");
+  A<string>* d = new A<string>("James");
+  d->show();
+  
+  /* object b, e creation is only possible since c++ 17. But the argument on the right
+   must match the type on the left */
+  A<const char*>* b = new A("James");
   b->show();
 
-  delete b;
+  A<long>* e = new A(2000L);
+  e->show();
+
+  delete b, d, e;
   
   unique_ptr<A<double>> c = make_unique<A<double>>(44.5);
   c->show();
