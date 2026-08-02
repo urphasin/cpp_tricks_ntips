@@ -30,3 +30,5 @@ int main() {
   delete h;
 
 }
+
+//g++ 11.cpp -o ans && ./ans && rm -rf ./ans 
