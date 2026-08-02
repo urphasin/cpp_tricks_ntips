@@ -38,7 +38,7 @@ public:
 
 int main() {
 
-  unique_ptr<Girl> girls[2] = { make_unique<Girl>("Female", "Alice", 20, 5.6), make_unique<Girl>("Female", "Jacky", 19, 5.8) };
+  unique_ptr<Girl> girls[2] = { make_unique<Girl>(), make_unique<Girl>("Female", "Jacky", 19, 5.8) };
   
   Girl g1;
   Girl g2("Female", "Alice", 20, 5.6);
