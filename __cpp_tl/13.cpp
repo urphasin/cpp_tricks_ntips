@@ -19,12 +19,16 @@ int main() {
   A a(56); // inferred like function templates
   a.show();
 
-  
+
   A<string>* d = new A<string>("James");
   d->show();
-  
+
+
   /* object b, e creation is only possible since c++ 17. But the argument on the right
-   must match the type on the left */
+   must match the type on the left
+
+   Class Template Argument Deduction (CTAD)
+   */
   A<const char*>* b = new A("James");
   b->show();
 
@@ -32,7 +36,9 @@ int main() {
   e->show();
 
   delete b, d, e;
-  
+
+
+  // Same concept with unique pointer because everything is smoother if you put in the time.
   unique_ptr<A<double>> c = make_unique<A<double>>(44.5);
   c->show();
 
