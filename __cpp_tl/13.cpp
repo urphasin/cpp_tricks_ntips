@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 
 using namespace std;
 
@@ -18,13 +19,14 @@ int main() {
   A a(56); // inferred like function templates
   a.show();
 
-  A<double>* b = new A<double>(44.5);
+  
+  A<string>* b = new A<string>("James");
   b->show();
 
-  A<string>* c = new A<string>("James");
+  delete b;
+  
+  unique_ptr<A<double>> c = make_unique<A<double>>(44.5);
   c->show();
-
-  delete b, c;
 
   return 0;
 }
