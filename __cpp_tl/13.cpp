@@ -20,7 +20,7 @@ int main() {
   a.show();
 
   
-  A<string>* b = new A<string>("James");
+  A<string>* b = new A((string)"James");
   b->show();
 
   delete b;
