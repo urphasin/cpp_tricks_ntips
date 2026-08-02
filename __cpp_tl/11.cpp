@@ -25,8 +25,6 @@ int main() {
   cout << sizeof(Human) << " bytes\n";
   cout << sizeof(Girl) << " bytes\n";
 
-  cout << typeid("hello").name() << endl;
-
   Human* h = new Girl();
   delete h;
 
