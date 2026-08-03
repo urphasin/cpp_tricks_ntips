@@ -30,11 +30,12 @@ int main() {
     Array<int>numbers(5);
 
     for (int i = 0; i < numbers.size(); i++) {
-      
+
     }
 
   } catch (runtime_error& re) {
-    cout << 
+    cout << re.what() << "\n";
   }
 
+  return 0;
 }
