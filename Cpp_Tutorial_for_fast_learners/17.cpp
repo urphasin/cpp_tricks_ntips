@@ -16,7 +16,13 @@ public:
   }
 
   int size() const { return sz; }
-  
+
+  void fill(const E& value) {
+    for (int i = 0; i < sz; i++) {
+      data[i] = value;
+    }
+  }
+
   // overload functions
   E& operator[](const int i) {
     if (i < 0 || i >= sz) {
@@ -38,7 +44,13 @@ int main() {
       numbers[i] = i * 4 + 1;
     }
 
-  } catch (const exception& re) {
+    for (int i = 0; i < numbers.size(); i++) {
+      cout << numbers[i] << ", ";
+    }
+    cout << endl;
+
+  }
+  catch (const exception& re) {
     cout << re.what() << "\n";
   }
 
