@@ -1,0 +1,6 @@
+echo 'add_executable(a7 src/a7.cpp src/mini_array.cpp src/push_back_benchmark.cpp src/random_access_benchmark.cpp src/insert_front_benchmark.cpp)' >> CMakeLists.txt
+
+verify with:
+  tail -n 5 CMakeLists.txt // show last 5 lines
+
+open -a TextEdit CMakeLists.txt
